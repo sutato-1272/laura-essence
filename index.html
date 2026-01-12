@@ -4,74 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'Aura Essence | Sentuhan Aroma dalam Mimpi</title>
-    <meta name="description" content="Koleksi parfum premium dengan kualitas fine fragrance dunia. Tahan lama, elegan, dan memikat jiwa.">
+    <meta name="description" content="Koleksi parfum premium dengan kualitas fine fragrance dunia. Tahan lama dan memikat jiwa.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
         .font-playfair { font-family: 'Playfair Display', serif; }
-        /* Background mewah dengan gambar estetik */
+        
+        /* Solusi Masalah 1: Overlay agar teks tidak tabrakan di laptop */
         .hero-bg { 
-            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
-                        url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=1600');
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=1600');
             background-size: cover;
             background-position: center;
         }
+        .hero-bg::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.6); /* Lapisan putih transparan */
+            z-index: 1;
+        }
+        .hero-content { position: relative; z-index: 2; }
     </style>
 </head>
-<body class="bg-[#f8f5f2] text-gray-800">
+<body class="bg-[#fcfaf8] text-gray-800">
 
     <section class="min-h-screen flex items-center justify-center px-6 py-20 hero-bg">
-        <div class="max-w-4xl text-center">
-            <span class="uppercase tracking-[0.4em] text-xs mb-6 block text-gray-500 font-semibold">Premium Fragrance</span>
-            <h1 class="font-playfair text-6xl md:text-8xl mb-8 italic text-gray-900 leading-tight">Sentuhan Aroma dalam Mimpi</h1>
-            <p class="text-lg md:text-2xl text-gray-700 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-                Eksplorasi koleksi parfum premium dengan kualitas fine fragrance dunia. Tahan lama dan mendefinisikan jati diri Anda.
+        <div class="max-w-4xl text-center hero-content">
+            <span class="uppercase tracking-[0.4em] text-[10px] md:text-xs mb-6 block text-gray-600 font-bold">Premium Fragrance</span>
+            <h1 class="font-playfair text-5xl md:text-8xl mb-8 italic text-black leading-tight">Sentuhan Aroma dalam Mimpi</h1>
+            <p class="text-base md:text-2xl text-gray-800 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                Eksplorasi koleksi parfum premium dengan kualitas fine fragrance dunia.
             </p>
-            <a href="#koleksi" class="inline-block border border-gray-900 px-12 py-5 text-sm tracking-widest uppercase hover:bg-gray-900 hover:text-white transition-all duration-700 ease-in-out">
+            <a href="#koleksi" class="inline-block border-2 border-black px-10 py-4 text-[10px] md:text-sm tracking-widest uppercase hover:bg-black hover:text-white transition-all duration-500 font-bold">
                 Lihat Koleksi
             </a>
         </div>
     </section>
 
-    <section id="koleksi" class="py-32 bg-white">
+    <section id="koleksi" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
-                <div class="group">
-                    <div class="overflow-hidden mb-8">
-                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600" alt="World Class" class="hover:scale-110 transition-transform duration-700">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center group">
+                    <div class="overflow-hidden mb-6 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600" class="hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
-                    <h3 class="font-playfair text-3xl mb-4 italic text-gray-900">World Class Scents</h3>
-                    <p class="text-sm text-gray-500 font-light leading-loose">Bibit parfum impor terbaik langsung dari Grasse, Perancis.</p>
+                    <h3 class="font-playfair text-2xl mb-3 italic">World Class Scents</h3>
+                    <p class="text-xs text-gray-500 font-light px-4">Bibit parfum impor terbaik langsung dari Grasse, Perancis.</p>
                 </div>
-                <div class="group">
-                    <div class="overflow-hidden mb-8">
-                        <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600" alt="Long Lasting" class="hover:scale-110 transition-transform duration-700">
+                <div class="text-center group">
+                    <div class="overflow-hidden mb-6 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600" class="hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
-                    <h3 class="font-playfair text-3xl mb-4 italic text-gray-900">Long Lasting</h3>
-                    <p class="text-sm text-gray-500 font-light leading-loose">Formulasi konsentrat tinggi yang bertahan hingga 12 jam aktivitas.</p>
+                    <h3 class="font-playfair text-2xl mb-3 italic">Long Lasting</h3>
+                    <p class="text-xs text-gray-500 font-light px-4">Konsentrat tinggi yang bertahan hingga 12 jam aktivitas.</p>
                 </div>
-                <div class="group">
-                    <div class="overflow-hidden mb-8">
-                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=600" alt="Skin Friendly" class="hover:scale-110 transition-transform duration-700">
+                <div class="text-center group">
+                    <div class="overflow-hidden mb-6 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=600" class="hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
-                    <h3 class="font-playfair text-3xl mb-4 italic text-gray-900">Skin Friendly</h3>
-                    <p class="text-sm text-gray-500 font-light leading-loose">Teruji secara dermatologis, aman dan tidak meninggalkan noda di pakaian.</p>
+                    <h3 class="font-playfair text-2xl mb-3 italic">Skin Friendly</h3>
+                    <p class="text-xs text-gray-500 font-light px-4">Teruji aman, lembut di kulit dan tidak membekas di pakaian.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-32 bg-[#f8f5f2] text-center px-6">
+    <section class="py-24 bg-[#fcfaf8] text-center px-6 border-t border-gray-100">
         <div class="max-w-3xl mx-auto">
-            <p class="font-playfair italic text-2xl md:text-4xl mb-10 text-gray-800 leading-relaxed">
-                "Setiap semprotan membawa saya ke dunia mimpi yang indah. Benar-benar kualitas kelas atas!"
+            <p class="font-playfair italic text-2xl md:text-3xl mb-8 text-gray-800">
+                "Kualitas kelas atas yang membawa saya ke dunia mimpi."
             </p>
-            <span class="text-xs tracking-[0.3em] uppercase text-gray-500 font-bold block mb-16">— Amanda, Beauty Influencer</span>
+            <span class="text-[10px] tracking-[0.3em] uppercase text-gray-400 font-bold block mb-12">— Amanda, Beauty Influencer</span>
             
-            <a href="https://wa.me/6285283212205?text=Halo%20L'Aura%20Essence,%20saya%20tertarik%20dengan%20koleksi%20parfum%20premiumnya.%20Bisa%20dibantu%20informasinya?" 
-               class="bg-gray-900 text-white px-16 py-6 rounded-full text-xs tracking-[0.2em] uppercase hover:bg-gray-700 transition-all shadow-xl hover:shadow-2xl">
-                Hubungi Kami via WhatsApp
+            <a href="https://wa.me/6285283212205?text=Halo%20L'Aura%20Essence,%20saya%20tertarik%20dengan%20koleksi%20parfum%20premiumnya." 
+               class="inline-block bg-black text-white px-8 md:px-12 py-5 rounded-full text-[10px] md:text-xs tracking-[0.2em] uppercase hover:bg-gray-800 transition-all shadow-lg active:scale-95">
+                Hubungi via WhatsApp
             </a>
         </div>
     </section>
